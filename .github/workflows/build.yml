@@ -28,7 +28,7 @@ jobs:
           . $IDF_PATH/export.sh
           idf.py set-target esp32s3
           idf.py build
-          idf.py merge-bin -o build/merged.bin
+          idf.py merge-bin -o merged.bin
           mkdir -p docs/firmware
           cp build/merged.bin docs/firmware/radar-s3-merged.bin
           cp build/esp32s3-wifi-radar.bin docs/firmware/esp32s3-wifi-radar.bin
