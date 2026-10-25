@@ -106,7 +106,7 @@ static void start_ping(uint8_t hz)
 
     esp_ping_callbacks_t cbs = {0};
     esp_ping_handle_t h = NULL;
-    if (esp_ping_new_session(&pc, &cbs, &h) == ESP_OK) esp_ping_start_session(h);
+    if (esp_ping_new_session(&pc, &cbs, &h) == ESP_OK) esp_ping_start(h);
     else ESP_LOGE(TAG, "ping session failed");
 }
 
